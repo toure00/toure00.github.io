@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GIT笔记 - Pumpkin Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="pumpkin" /><meta name="description" content="learning git , 学习git" /><meta name="keywords" content="git, notes, config, 笔记, 配置" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://pumpkinblog.top/post/gitcmd/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="GIT笔记" />
+<meta property="og:description" content="learning git , 学习git" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pumpkinblog.top/post/gitcmd/" />
+<meta property="article:published_time" content="2019-05-20T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-11-23T19:15:46+08:00" />
+<meta itemprop="name" content="GIT笔记">
+<meta itemprop="description" content="learning git , 学习git">
+
+
+<meta itemprop="datePublished" content="2019-05-20T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-23T19:15:46&#43;08:00" />
+<meta itemprop="wordCount" content="4557">
+
+
+
+<meta itemprop="keywords" content="cmd," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GIT笔记"/>
+<meta name="twitter:description" content="learning git , 学习git"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pumpkin</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pumpkin</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">GIT笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-20 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> git </a>
+            </div>
+          <span class="more-meta"> 约 4557 字 </span>
+          <span class="more-meta"> 预计阅读 10 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#图解git">图解Git</a>
+<ul>
+<li><a href="#基本用法">基本用法</a></li>
+<li><a href="#约定">约定</a></li>
+<li><a href="#命令详解">命令详解</a>
+<ul>
+<li><a href="#diff">Diff</a></li>
+<li><a href="#commit">Commit</a></li>
+<li><a href="#checkout">Checkout</a></li>
+<li><a href="#detached-head--匿名分支提交">Detached HEAD(匿名分支提交)</a></li>
+<li><a href="#reset">Reset</a></li>
+<li><a href="#merge">Merge</a></li>
+<li><a href="#cherry-pick">Cherry Pick</a></li>
+<li><a href="#rebase">Rebase</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#技术说明">技术说明</a></li>
+<li><a href="#git常用命令">Git常用命令</a>
+<ul>
+<li><a href="#git设置信息">git设置信息</a></li>
+<li><a href="#git初始化仓库命令">git初始化仓库命令</a></li>
+<li><a href="#git克隆远程仓库命令">git克隆远程仓库命令</a></li>
+<li><a href="#git查看状态命令">git查看状态命令</a></li>
+<li><a href="#git比较命令">git比较命令</a></li>
+<li><a href="#git查看分支命令">git查看分支命令</a></li>
+<li><a href="#git提交工作区内容到暂存区命令">git提交工作区内容到暂存区命令</a></li>
+<li><a href="#git提交新版本命令">git提交新版本命令</a></li>
+<li><a href="#git切换版本命令">git切换版本命令 <sup class="footnote-ref" id="fnref:fn-1"><a href="#fn:fn-1">1</a></sup></a></li>
+<li><a href="#git重置版本命令">git重置版本命令 <sup class="footnote-ref" id="fnref:fn-2"><a href="#fn:fn-2">2</a></sup></a></li>
+<li><a href="#git合并历史版本命令">git合并历史版本命令</a></li>
+<li><a href="#git合并分支命令--多用于解决冲突">git合并分支命令~ (多用于解决冲突)</a></li>
+<li><a href="#git快照当前工作区状态">git快照当前工作区状态</a></li>
+<li><a href="#git推送本地版本到远程仓库命令">git推送本地版本到远程仓库命令</a></li>
+<li><a href="#git获取远程仓库版本命令">git获取远程仓库版本命令</a></li>
+<li><a href="#git查看版本变更记录命令">git查看版本变更记录命令</a></li>
+<li><a href="#git打tag命令">git打tag命令</a></li>
+<li><a href="#git删除移动命令">git删除移动命令</a></li>
+<li><a href="#git操作远程仓库免密码">git操作远程仓库免密码</a>
+<ul>
+<li><a href="#ssh方式">ssh方式</a></li>
+<li><a href="#http方式">http方式</a></li>
+<li><a href="#凭证储存">凭证储存</a></li>
+</ul></li>
+<li><a href="#git排除文件-文件夹">git排除文件/文件夹</a></li>
+<li><a href="#git设置代理">git设置代理</a></li>
+</ul></li>
+<li><a href="#my-git-configure">My Git Configure <a id="orgd753555"></a></a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="https://picsum.photos/1920/1033" alt="avatar" /></p>
+
+<h2 id="图解git">图解Git</h2>
+
+<p><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解git原地址</a></p>
+
+<h3 id="基本用法">基本用法</h3>
+
+<figure>
+    <img src="/ox-hugo/basic-usage.svg"/> 
+</figure>
+
+
+<p>上面的四条命令在工作目录、暂存目录(也叫做索引)和仓库之间复制文件。</p>
+
+<ul>
+<li>git add files 把当前文件放入暂存区域。</li>
+<li>git commit 给暂存区域生成快照并提交。</li>
+<li>git reset &ndash; files 用来撤销最后一次git add files，你也可以用git reset 撤销所有暂存区域文件。</li>
+<li>git checkout &ndash; files 把文件从暂存区域复制到工作目录，用来丢弃本地修改。</li>
+</ul>
+
+<p>你可以用 git reset -p, git checkout -p, or git add -p进入交互模式。</p>
+
+<p>也可以跳过暂存区域直接从仓库取出文件或者直接提交代码。
+<img src="/ox-hugo/basic-usage-2.svg" alt="" /></p>
+
+<ul>
+<li>git commit -a 相当于运行 git add 把所有当前目录下的文件加入暂存区域再运行。git commit.</li>
+<li>git commit files 进行一次包含最后一次提交加上工作目录中文件快照的提交。并且文件被添加到暂存区域。</li>
+<li>git checkout HEAD &ndash; files 回滚到复制最后一次提交。</li>
+</ul>
+
+<h3 id="约定">约定</h3>
+
+<p>后文中以下面的形式使用图片。
+<img src="/ox-hugo/conventions.svg" alt="" /></p>
+
+<p>绿色的5位字符表示提交的ID，分别指向父节点。分支用橘色显示，分别指向特定的提交。当前分支由附在其上的HEAD标识。 这张图片里显示最后5次提交，ed489是最新提交。 master分支指向此次提交，另一个maint分支指向祖父提交节点。</p>
+
+<h3 id="命令详解">命令详解</h3>
+
+<h4 id="diff">Diff</h4>
+
+<p>有许多种方法查看两次提交之间的变动。下面是一些示例。
+<img src="/ox-hugo/diff.svg" alt="" /></p>
+
+<h4 id="commit">Commit</h4>
+
+<p>提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是master。 在运行命令之前，master指向ed489，提交后，master指向新的节点f0cec并以ed489作为父节点。
+<img src="/ox-hugo/commit-master.svg" alt="" /></p>
+
+<p>即便当前分支是某次提交的祖父节点，git会同样操作。下图中，在master分支的祖父节点maint分支进行一次提交，生成了1800b。 这样，maint分支就不再是master分支的祖父节点。此时，合并 (或者 衍合) 是必须的。
+<img src="/ox-hugo/commit-maint.svg" alt="" /></p>
+
+<p>如果想更改一次提交，使用 git commit &ndash;amend。git会使用与当前提交相同的父节点进行一次新提交，旧的提交会被取消。
+<img src="/ox-hugo/commit-amend.svg" alt="" /></p>
+
+<p>另一个例子是分离HEAD提交,后文讲。</p>
+
+<h4 id="checkout">Checkout</h4>
+
+<p>checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工作目录，也可用于切换分支。</p>
+
+<p>当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，git checkout HEAD~ foo.c会将提交节点HEAD~(即当前提交节点的父节点)中的foo.c复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化。
+<img src="/ox-hugo/checkout-files.svg" alt="" /></p>
+
+<p>当不指定文件名，而是给出一个（本地）分支时，那么HEAD标识会移动到那个分支（也就是说，我们“切换”到那个分支了），然后暂存区域和工作目录中的内容会和HEAD对应的提交节点一致。新提交节点（下图中的a47c3）中的所有文件都会被复制（到暂存区域和工作目录中）；只存在于老的提交节点（ed489）中的文件会被删除；不属于上述两者的文件会被忽略，不受影响。
+<img src="/ox-hugo/checkout-branch.svg" alt="" /></p>
+
+<p>如果既没有指定文件名，也没有指定分支名，而是一个标签、远程分支、SHA-1值或者是像master~3类似的东西，就得到一个匿名分支，称作detached HEAD（被分离的HEAD标识）。这样可以很方便地在历史版本之间互相切换。比如说你想要编译1.6.6.1版本的git，你可以运行git checkout v1.6.6.1（这是一个标签，而非分支名），编译，安装，然后切换回另一个分支，比如说git checkout master。然而，当提交操作涉及到“分离的HEAD”时，其行为会略有不同，详情见在下面。
+<img src="/ox-hugo/checkout-detached.svg" alt="" /></p>
+
+<h4 id="detached-head--匿名分支提交">Detached HEAD(匿名分支提交)</h4>
+
+<p>HEAD标识处于分离状态时的提交操作当HEAD处于分离状态（不依附于任一分支）时，提交操作可以正常进行，但是不会更新任何已命名的分支。(你可以认为这是在更新一个匿名分支。)
+<img src="/ox-hugo/commit-detached.svg" alt="" /></p>
+
+<p>一旦此后你切换到别的分支，比如说master，那么这个提交节点（可能）再也不会被引用到，然后就会被丢弃掉了。注意这个命令之后就不会有东西引用2eecb。
+<img src="/ox-hugo/checkout-after-detached.svg" alt="" /></p>
+
+<p>但是，如果你想保存这个状态，可以用命令git checkout -b name来创建一个新的分支。
+<img src="/ox-hugo/checkout-b-detached.svg" alt="" /></p>
+
+<h4 id="reset">Reset</h4>
+
+<p>reset命令把当前分支指向另一个位置，并且有选择的变动工作目录和索引。也用来在从历史仓库中复制文件到索引，而不动工作目录。</p>
+
+<p>如果不给选项，那么当前分支指向到那个提交。如果用&ndash;hard选项，那么工作目录也更新，如果用&ndash;soft选项，那么都不变。
+<img src="/ox-hugo/reset-commit.svg" alt="" /></p>
+
+<p>如果没有给出提交点的版本号，那么默认用HEAD。这样，分支指向不变，但是索引会回滚到最后一次提交，如果用&ndash;hard选项，工作目录也同样。
+<img src="/ox-hugo/reset.svg" alt="" /></p>
+
+<p>如果给了文件名(或者 -p选项), 那么工作效果和带文件名的checkout差不多，除了索引被更新。
+<img src="/ox-hugo/reset-files.svg" alt="" /></p>
+
+<h4 id="merge">Merge</h4>
+
+<p>merge 命令把不同分支合并起来。合并前，索引必须和当前提交相同。如果另一个分支是当前提交的祖父节点，那么合并命令将什么也不做。 另一种情况是如果当前提交是另一个分支的祖父节点，就导致fast-forward合并。指向只是简单的移动，并生成一个新的提交。
+<img src="/ox-hugo/merge-ff.svg" alt="" /></p>
+
+<p>否则就是一次真正的合并。默认把当前提交(ed489 如下所示)和另一个提交(33104)以及他们的共同祖父节点(b325c)进行一次三方合并。结果是先保存当前目录和索引，然后和父节点33104一起做一次新提交。
+<img src="/ox-hugo/merge.svg" alt="" /></p>
+
+<h4 id="cherry-pick">Cherry Pick</h4>
+
+<p>cherry-pick命令&rsquo;复制&rsquo;一个提交节点并在当前分支做一次完全一样的新提交。
+<img src="/ox-hugo/cherry-pick.svg" alt="" /></p>
+
+<h4 id="rebase">Rebase</h4>
+
+<p>衍合是合并命令的另一种选择。合并把两个父分支合并进行一次提交，提交历史不是线性的。衍合在当前分支上重演另一个分支的历史，提交历史是线性的。 本质上，这是线性化的自动的 cherry-pick
+<img src="/ox-hugo/rebase.svg" alt="" /></p>
+
+<p>上面的命令都在topic分支中进行，而不是master分支，在master分支上重演，并且把分支指向新的节点。注意旧提交没有被引用，将被回收。</p>
+
+<p>要限制回滚范围，使用&ndash;onto选项。下面的命令在master分支上重演当前分支从169a6以来的最近几个提交，即2c33a。
+<img src="/ox-hugo/rebase-onto.svg" alt="" /></p>
+
+<p>同样有git rebase &ndash;interactive让你更方便的完成一些复杂操作，比如丢弃、重排、修改、合并提交。没有图片体现这些，细节看这里:<a href="http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html#%5Finteractive%5Fmode">git-rebase(1)</a></p>
+
+<blockquote>
+<p>git rebase 之前 问问自己， 会有其他人看这个分支么？</p>
+
+<p>if YES 不要采用这种带有破坏性的修改commit 历史的rebase命令</p>
+
+<p>if NO ok，随你便，可以使用rebase</p>
+</blockquote>
+
+<h2 id="技术说明">技术说明</h2>
+
+<p>文件内容并没有真正存储在索引(.git/index)或者提交对象中，而是以blob的形式分别存储在数据库中(.git/objects)，并用SHA-1值来校验。 索引文件用识别码列出相关的blob文件以及别的数据。对于提交来说，以树(tree)的形式存储，同样用对于的哈希值识别。树对应着工作目录中的文件夹，树中包含的 树或者blob对象对应着相应的子目录和文件。每次提交都存储下它的上一级树的识别码。</p>
+
+<p>如果用detached HEAD提交，那么最后一次提交会被the reflog for HEAD引用。但是过一段时间就失效，最终被回收，与git commit &ndash;amend或者git rebase很像。</p>
+
+<hr />
+
+<h2 id="git常用命令">Git常用命令</h2>
+
+<h3 id="git设置信息">git设置信息</h3>
+
+<ul>
+<li><code>git config -l</code> (查看git全局设置信息)</li>
+<li><code>git config --global user.name 'your name'</code> (设置名字)</li>
+<li><code>git config --global user.email your@gmail.com</code> (设置邮箱)</li>
+<li><code>git config --global alias.别名 '完整名'</code> (给命令设置别名)</li>
+<li><a href="#orgd753555">my config</a></li>
+</ul>
+
+<h3 id="git初始化仓库命令">git初始化仓库命令</h3>
+
+<ul>
+<li><code>git init</code></li>
+<li><code>git init --bare depotName.git</code> (创建远程仓库)</li>
+</ul>
+
+<h3 id="git克隆远程仓库命令">git克隆远程仓库命令</h3>
+
+<ul>
+<li><code>git clone userName@addr:path</code></li>
+</ul>
+
+<h3 id="git查看状态命令">git查看状态命令</h3>
+
+<ul>
+<li><code>git status -s</code> (显示简写)</li>
+</ul>
+
+<h3 id="git比较命令">git比较命令</h3>
+
+<ul>
+<li><code>git diff</code> (工作区与暂存区比较)</li>
+<li><code>git diff HEAD</code> (工作区与当前版本库比较)</li>
+<li><code>git diff --cached</code> (暂存区与当前版本库比较)</li>
+<li><code>git diff branchName</code> (工作区与分支版本比较)</li>
+</ul>
+
+<h3 id="git查看分支命令">git查看分支命令</h3>
+
+<ul>
+<li><code>git branch</code> (查看分支列表)</li>
+<li><code>git branch branchName</code> (创建分支)</li>
+<li><code>git branch -d branchName</code> (删除分支)</li>
+<li><code>git branch -D branchName</code> (强制删除分支)</li>
+</ul>
+
+<h3 id="git提交工作区内容到暂存区命令">git提交工作区内容到暂存区命令</h3>
+
+<ul>
+<li><code>git add .</code> (将当前工作区的修改提交到暂存区)</li>
+<li><code>git add fileName</code> (将当前修改文件提交到暂存区)</li>
+</ul>
+
+<h3 id="git提交新版本命令">git提交新版本命令</h3>
+
+<ul>
+<li><code>git commit -m 'desc'</code> (将暂存区内容提交到版本库并创建新的版本)</li>
+<li><code>git commit --amend</code> (撤销当前版本,回到上次提交的版本)</li>
+</ul>
+
+<h3 id="git切换版本命令">git切换版本命令 <sup class="footnote-ref" id="fnref:fn-1"><a href="#fn:fn-1">1</a></sup></h3>
+
+<ul>
+<li>checkout切换版本只移动HARD不移动分支</li>
+<li><code>git checkout branchName</code> (切换分支)</li>
+<li><code>git checkout -b branchName</code> (创建并切换分支)</li>
+<li><code>git checkout fileName</code> (将暂存区文件复制到工作区)</li>
+<li><code>git checkout HEAD~fileName</code> (将当前版本的上一个版本中的文件复制到工作区和暂存区)</li>
+<li><code>git checkout tagName</code> (切换版本到当前标签的版本)</li>
+<li><code>git checkout master~Num</code> (切换版本到匿名分支)</li>
+<li><code>git checkout commitNo</code> (根据版本代码切换到当前版本代码的版本,只移动HARD不移动分支 )~ (至少输入5位)</li>
+</ul>
+
+<h3 id="git重置版本命令">git重置版本命令 <sup class="footnote-ref" id="fnref:fn-2"><a href="#fn:fn-2">2</a></sup></h3>
+
+<ul>
+<li><code>git reset 默认参数HARD</code> (暂存区回滚到当前版本,工作目录不变)</li>
+<li><code>git reset --hard</code> (暂存区与工作区回滚到当前版本)</li>
+<li><code>git reset --soft</code> (指向版本,暂存区与工作区都不变)</li>
+<li><code>git reset fileName</code> (将版本库的文件覆盖到暂存区)</li>
+<li><code>git reset tagName</code> (指向版本到当前标签的版本)</li>
+<li><code>git reset master~Num</code> (指向版本到匿名分支)</li>
+<li><code>git reset commitNo</code> (根据版本代码指向到当前版本代码的版本)~ (至少输入5位)</li>
+</ul>
+
+<h3 id="git合并历史版本命令">git合并历史版本命令</h3>
+
+<ul>
+<li><code>git cherry-pick commitNo tagName</code> (复制一个版本并和当前版本生成一个新的版本)</li>
+</ul>
+
+<h3 id="git合并分支命令--多用于解决冲突">git合并分支命令~ (多用于解决冲突)</h3>
+
+<ul>
+<li><code>git merge</code> (合并分支,如果无冲突,则看不出合并痕迹)</li>
+<li><code>git merge --no-ff</code> (合并分支,如果无冲突,也留下合并痕迹)</li>
+</ul>
+
+<h3 id="git快照当前工作区状态">git快照当前工作区状态</h3>
+
+<ul>
+<li><code>git stash</code> (保存当前工作区的状态)</li>
+<li><code>git stash list</code> (列出保存状态列表)</li>
+<li><code>git stash apply</code> (恢复保存时的状态,恢复后不从状态列表中删除)</li>
+<li><code>git stash pop</code> (恢复保存时的状态,恢复后从状态列表中删除)</li>
+</ul>
+
+<h3 id="git推送本地版本到远程仓库命令">git推送本地版本到远程仓库命令</h3>
+
+<ul>
+<li><code>git push</code></li>
+<li><code>git push origin master</code> (推送主分支)</li>
+<li><code>git push origin dev</code> (dev为本地已有的分支,此命令可以将已有本地已有分支添加到远程仓库)</li>
+<li><code>git push --force-with-lease</code></li>
+</ul>
+
+<h3 id="git获取远程仓库版本命令">git获取远程仓库版本命令</h3>
+
+<ul>
+<li><code>git pull</code> (获取远程仓库的代码,默认获取主分支,会覆盖工作区和暂存区的修改)</li>
+<li><code>git pull origin branchName</code> (获取该分支的代码)</li>
+</ul>
+
+<h3 id="git查看版本变更记录命令">git查看版本变更记录命令</h3>
+
+<ul>
+<li><code>git log --oneline</code> (显示简写) &ndash;graph~ (显示变更树) &ndash;decorate~ (显示tag标签,显示HARD指向)</li>
+</ul>
+
+<h3 id="git打tag命令">git打tag命令</h3>
+
+<ul>
+<li><code>git tag</code> (列出标签列表)</li>
+<li><code>git tag verNo</code> (为当前分支添加标签)</li>
+<li><code>git tag verNo commitID</code> (为输入的提交点添加标签)</li>
+<li><code>git tag -a verNo -m '描述'commitID</code> (为输入的提交点添加标签)</li>
+<li><code>git tag -d verNo</code> (删除标签)</li>
+<li><code>git push origin tagName</code> (推送本地标签到远程仓库)</li>
+<li><code>git push origin --tags</code> (推送本地所有标签到远程仓库)</li>
+<li><code>git push origin :refs/tags/tagName</code> (先删除本地标签,然后用此命令可以删除远程标签)</li>
+</ul>
+
+<h3 id="git删除移动命令">git删除移动命令</h3>
+
+<ul>
+<li><code>git rm</code></li>
+<li><code>git mv</code></li>
+</ul>
+
+<h3 id="git操作远程仓库免密码">git操作远程仓库免密码</h3>
+
+<h4 id="ssh方式">ssh方式</h4>
+
+<p>生成公钥,将公钥添加到服务商的ssh keys</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ssh-keygen -t rsa -f ~/.ssh/id_rsa -P <span class="s1">&#39;&#39;</span> -C <span class="s2">&#34;your@email&#34;</span>
+ssh-agent bash <span class="o">&amp;&amp;</span> ssh-add  ~/.ssh/id_rsa</code></pre></td></tr></table>
+</div>
+</div>
+<p>修改项目下.git目录下的config文件,修改为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">url = git@gitlab.com:toure00/learn_demo.git</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="http方式">http方式</h4>
+
+<p>修改项目下.git目录下的config文件,修改为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">url = https://username:password@gitlab.com/toure00/my_learn_note.git</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="凭证储存">凭证储存</h4>
+
+<p><a href="https://git-scm.com/book/zh/v2/Git-工具-凭证存储">GIT工具-凭证储存</a></p>
+
+<h3 id="git排除文件-文件夹">git排除文件/文件夹</h3>
+
+<p><a href="https://www.cnblogs.com/kevingrace/p/5690241.html">Git忽略提交规则 - .gitignore配置运维总结 - 散尽浮华 - 博客园</a></p>
+
+<p>在 <code>.gitignore</code> 文件中添加要排除的规则，如：</p>
+
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.log</td>
+<td>排除所有log文件</td>
+</tr>
+
+<tr>
+<td>!error.log</td>
+<td>忽略log文件,但是不忽略error.log</td>
+</tr>
+
+<tr>
+<td>build/</td>
+<td>忽略 build/ 文件夹下的所有文件</td>
+</tr>
+
+<tr>
+<td>build/*.tmp</td>
+<td>忽略 build/ 文件夹下的所有tmp文件</td>
+</tr>
+
+<tr>
+<td>/TODO</td>
+<td>仅在当前目录下忽略 TODO 文件, 但不包括子目录下的 subdir/TODO,(防止递归)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="git设置代理">git设置代理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Set Proxy</span>
+git config --global http.proxy <span class="s1">&#39;socks5://127.0.0.1:1080&#39;</span>
+git config --global https.proxy <span class="s1">&#39;socks5://127.0.0.1:1080&#39;</span>
+
+<span class="c1"># Unset Proxy</span>
+git config --global --unset http.proxy
+git config --global --unset https.proxy</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="my-git-configure">My Git Configure <a id="orgd753555"></a></h2>
+
+<p>git configure path: ~/.gitconfig</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">user</span><span class="p">]</span>
+  <span class="nx">name</span> <span class="p">=</span> <span class="nx">toure00</span>
+  <span class="nx">email</span> <span class="p">=</span> <span class="mi">291774777</span><span class="err">@</span><span class="nx">qq</span><span class="p">.</span><span class="nx">com</span>
+<span class="p">[</span><span class="nx">alias</span><span class="p">]</span>
+  <span class="nx">st</span> <span class="p">=</span> <span class="nx">status</span> <span class="err">-</span><span class="nx">s</span>
+  <span class="nx">ci</span> <span class="p">=</span> <span class="nx">commit</span>
+  <span class="nx">l</span> <span class="p">=</span> <span class="nx">log</span> <span class="err">--</span><span class="nx">oneline</span> <span class="err">--</span><span class="nx">decorate</span> <span class="mi">-12</span> <span class="err">--</span><span class="nx">color</span>
+  <span class="nx">ll</span> <span class="p">=</span> <span class="nx">log</span> <span class="err">--</span><span class="nx">oneline</span> <span class="err">--</span><span class="nx">decorate</span> <span class="err">--</span><span class="nx">color</span>
+  <span class="nx">lc</span> <span class="p">=</span> <span class="nx">log</span> <span class="err">--</span><span class="nx">graph</span> <span class="err">--</span><span class="nx">color</span>
+  <span class="nx">co</span> <span class="p">=</span> <span class="nx">checkout</span>
+  <span class="nx">br</span> <span class="p">=</span> <span class="nx">branch</span>
+  <span class="nx">rb</span> <span class="p">=</span> <span class="nx">rebase</span>
+  <span class="nx">dci</span> <span class="p">=</span> <span class="nx">dcommit</span>
+  <span class="nx">sbi</span> <span class="p">=</span> <span class="nx">submodule</span> <span class="nx">init</span>
+  <span class="nx">sbu</span> <span class="p">=</span> <span class="nx">submodule</span> <span class="nx">update</span>
+  <span class="nx">sbp</span> <span class="p">=</span> <span class="nx">submodule</span> <span class="nx">foreach</span> <span class="nx">git</span> <span class="nx">pull</span>
+  <span class="nx">sbc</span> <span class="p">=</span> <span class="nx">submodule</span> <span class="nx">foreach</span> <span class="nx">git</span> <span class="nx">co</span> <span class="nx">master</span>
+  <span class="nx">lg</span> <span class="p">=</span> <span class="nx">log</span> <span class="err">--</span><span class="nx">color</span> <span class="err">--</span><span class="nx">graph</span> <span class="err">--</span><span class="nx">pretty</span><span class="p">=</span><span class="nx">format</span><span class="err">:</span><span class="s1">&#39;%Cred%h%Creset -%C~ (yellow)%d%Creset %s %Cgreen~ (%cr) %C~ (bold blue)&lt;%an&gt;%Creset&#39;</span> <span class="err">--</span><span class="nx">abbrev</span><span class="err">-</span><span class="nx">commit</span>
+<span class="p">[</span><span class="nx">http</span><span class="p">]</span>
+  <span class="nx">proxy</span> <span class="p">=</span> <span class="nx">socks5</span><span class="err">://</span><span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span><span class="err">:</span><span class="mi">1080</span>
+<span class="p">[</span><span class="nx">https</span><span class="p">]</span>
+  <span class="nx">proxy</span> <span class="p">=</span> <span class="nx">socks5</span><span class="err">://</span><span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span><span class="err">:</span><span class="mi">1080</span></code></pre></td></tr></table>
+</div>
+</div><div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:fn-1">git checkout 切换版本或分支会覆盖当前的暂存区与工作区)
+ <a class="footnote-return" href="#fnref:fn-1"><sup>[return]</sup></a></li>
+<li id="fn:fn-2">git reset 移动当前分支和HARD
+ <a class="footnote-return" href="#fnref:fn-2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">pumpkin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/cmd/">cmd</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/build_hugo_note/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">快速搭建Hugo博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/bridcmd/">
+            <span class="next-text nav-default">linux常用命令</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="toure00/toure00.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://pumpkinblog.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">pumpkin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Magit常用命令总结 - Pumpkin Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="pumpkin" /><meta name="description" content="Magit常用命令总结" /><meta name="keywords" content="emacs, git, magit" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://pumpkinblog.top/post/magit_note/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Magit常用命令总结" />
+<meta property="og:description" content="Magit常用命令总结" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pumpkinblog.top/post/magit_note/" />
+<meta property="article:published_time" content="2019-08-23T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-11-29T13:56:22+08:00" />
+<meta itemprop="name" content="Magit常用命令总结">
+<meta itemprop="description" content="Magit常用命令总结">
+
+
+<meta itemprop="datePublished" content="2019-08-23T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-29T13:56:22&#43;08:00" />
+<meta itemprop="wordCount" content="1320">
+
+
+
+<meta itemprop="keywords" content="emacs,git,magit," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Magit常用命令总结"/>
+<meta name="twitter:description" content="Magit常用命令总结"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pumpkin</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pumpkin</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Magit常用命令总结</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-08-23 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> git </a>
+            </div>
+          <span class="more-meta"> 约 1320 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#magit">Magit</a></li>
+<li><a href="#magit-快捷键">Magit 快捷键</a></li>
+<li><a href="#rebase">Rebase <a id="org9a1e2a9"></a></a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="https://picsum.photos/1920/1017" alt="avatar" /></p>
+
+<h2 id="magit">Magit</h2>
+
+<p><code>Magit</code> 是 <code>emacs</code> 中的 <code>git</code> 工具，这里记录一下我研究 <code>magit</code> 的笔记 ，如有错误，请在留言区指出。</p>
+
+<h2 id="magit-快捷键">Magit 快捷键</h2>
+
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>SCP g i</td>
+<td>初始化git仓库</td>
+</tr>
+
+<tr>
+<td>SCP g s</td>
+<td>进入magit status</td>
+</tr>
+
+<tr>
+<td>SCP g f l</td>
+<td>查看某一个文件的变化历史</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>C-x l</td>
+<td>进入专家模式</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>l l</td>
+<td>查看当前分支log历史</td>
+</tr>
+
+<tr>
+<td>l o</td>
+<td>查看其他分支历史</td>
+</tr>
+
+<tr>
+<td>l a</td>
+<td>查看所有分支历史</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>b b</td>
+<td>切换commit(只移动HARD指针),光标下的commit为第一候选</td>
+</tr>
+
+<tr>
+<td>b l</td>
+<td>切换分支</td>
+</tr>
+
+<tr>
+<td>b c</td>
+<td>新建分支</td>
+</tr>
+
+<tr>
+<td>b x</td>
+<td>删除分支</td>
+</tr>
+
+<tr>
+<td>b X / o</td>
+<td>切换分支和HARD指针到当前光标下的commit(reset)</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>r i</td>
+<td>交互式合并commit <a href="#org9a1e2a9">ri</a></td>
+</tr>
+
+<tr>
+<td>r k</td>
+<td>移除 commit</td>
+</tr>
+
+<tr>
+<td>r m</td>
+<td>修改 commit</td>
+</tr>
+
+<tr>
+<td>r w</td>
+<td>改写 commit summary</td>
+</tr>
+
+<tr>
+<td>r s</td>
+<td>合并分支(常用于master分支=&gt;其他分支)</td>
+</tr>
+
+<tr>
+<td></td>
+<td>(不显示合并记录,log为一条直线,会移除当前分支的提交记录)</td>
+</tr>
+
+<tr>
+<td></td>
+<td>(不要在公共分支上使用 rebase)</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>m m</td>
+<td>合并分支(常用于其他分支 =&gt; master)</td>
+</tr>
+
+<tr>
+<td></td>
+<td>(显示合并记录,log为多条分支线,能保存完整的提交记录)</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>c c</td>
+<td>提交commit</td>
+</tr>
+
+<tr>
+<td>c a</td>
+<td>修改当前commit的summary(不生成新的提交)</td>
+</tr>
+
+<tr>
+<td>c e</td>
+<td>将当前暂存区的内容整合进当前commit(不产生新的提交)</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>p u</td>
+<td>push到远程仓库</td>
+</tr>
+
+<tr>
+<td>p u</td>
+<td>push to upstram最普通的git push</td>
+</tr>
+
+<tr>
+<td>p e</td>
+<td>push to elsewhere会提示你push到哪个远程分支</td>
+</tr>
+
+<tr>
+<td>p o</td>
+<td>push another branch to会提示你push哪个分支</td>
+</tr>
+
+<tr>
+<td>p T</td>
+<td>push a tagpush一个tag标签</td>
+</tr>
+
+<tr>
+<td>p t</td>
+<td>push all tagpush所有tag标签</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>f u</td>
+<td>fetch上游仓库到本地(会覆盖工作区和暂存区的修改)</td>
+</tr>
+
+<tr>
+<td>f p</td>
+<td>fetch远程仓库到本地</td>
+</tr>
+
+<tr>
+<td>f e</td>
+<td>提示你从哪fetch</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>F u</td>
+<td>pull上游仓库到本地(会覆盖工作区和暂存区的修改)</td>
+</tr>
+
+<tr>
+<td>F p</td>
+<td>pull远程仓库到本地</td>
+</tr>
+
+<tr>
+<td>F e</td>
+<td>提示你从哪pull</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>h</td>
+<td>查看magit帮助文档</td>
+</tr>
+
+<tr>
+<td>h g</td>
+<td>刷新</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>C u</td>
+<td>克隆远程仓库(url)</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>M a</td>
+<td>建立本地仓库与远程仓库分支的关联</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>s</td>
+<td>add 光标下的文件</td>
+</tr>
+
+<tr>
+<td>S</td>
+<td>add 所有文件</td>
+</tr>
+
+<tr>
+<td>vs</td>
+<td>add 选中的修改内容</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>u</td>
+<td>撤销 add 光标下的文件</td>
+</tr>
+
+<tr>
+<td>U</td>
+<td>撤销 add 所有文件</td>
+</tr>
+
+<tr>
+<td>vu</td>
+<td>撤销 add 选中的修改内容</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>x</td>
+<td>删除光标下新增的修改(文件和内容)</td>
+</tr>
+
+<tr>
+<td>X</td>
+<td>列出项目中的所有文件,可选择删除</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>y r</td>
+<td>列出项目中的所有的本地/远程分支和tag 可用x删除分支</td>
+</tr>
+
+<tr>
+<td>y b</td>
+<td>复制commit的hash code</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>比较commit</td>
+</tr>
+
+<tr>
+<td>d</td>
+<td>比较不同commit</td>
+</tr>
+
+<tr>
+<td>d r</td>
+<td>比较选中范围内的commit(第一个和最后一个)</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>e</td>
+<td>使用ediff比较不同commit的文件(手动选择要比较的文件)</td>
+</tr>
+
+<tr>
+<td></td>
+<td>比较选中范围内的commit(第一个和最后一个)中的文件</td>
+</tr>
+
+<tr>
+<td></td>
+<td>如果光标在Staged或Unstaged上,则比较三个阶段的文件差异</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>z p / A</td>
+<td>找回 stash 的修改</td>
+</tr>
+
+<tr>
+<td>z k</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="rebase">Rebase <a id="org9a1e2a9"></a></h2>
+
+<p>可以实现调整commit 的顺序，合并commit,放弃某个commit等，下面这些按键绑定是使用evil-magit后的按键绑定，这些绑定不必担心记不住，用到的时候magit会以注释的形式展示给你</p>
+
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>p</td>
+<td>pick = use commit</td>
+<td>保留此commit</td>
+</tr>
+
+<tr>
+<td>r</td>
+<td>reword = use commit, but edit the commit message</td>
+<td>只修改此次commit 的日志</td>
+</tr>
+
+<tr>
+<td>e</td>
+<td>edit = use commit, but stop for amending</td>
+<td></td>
+</tr>
+
+<tr>
+<td>s</td>
+<td>squash = use commit, but meld into previous commit</td>
+<td>把这条commit与上一条commit合并(会提示输入合并之后的日志)</td>
+</tr>
+
+<tr>
+<td>f</td>
+<td>fixup = like &ldquo;squash&rdquo;, but discard this commit&rsquo;s log message</td>
+<td>同squash,只是合并后的那条commit直接使用上条commit的日志</td>
+</tr>
+
+<tr>
+<td>x</td>
+<td>exec = run command (the rest of the line) using shell</td>
+<td></td>
+</tr>
+
+<tr>
+<td>d</td>
+<td>drop = remove commit</td>
+<td>丢弃此条commit</td>
+</tr>
+
+<tr>
+<td>u</td>
+<td>undo last change</td>
+<td></td>
+</tr>
+
+<tr>
+<td>C-c C-c</td>
+<td>tell Git to make it happen</td>
+<td>执行更改</td>
+</tr>
+
+<tr>
+<td>C-c C-k</td>
+<td>tell Git that you changed your mind, i.e. abort</td>
+<td>放弃更改</td>
+</tr>
+
+<tr>
+<td>k</td>
+<td>move point to previous line</td>
+<td></td>
+</tr>
+
+<tr>
+<td>j</td>
+<td>move point to next line</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M-k</td>
+<td>move the commit at point up</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M-j</td>
+<td>move the commit at point down</td>
+<td></td>
+</tr>
+
+<tr>
+<td>RET</td>
+<td>show the commit at point in another buffer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">pumpkin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/emacs/">emacs</a>
+          <a href="/tags/git/">git</a>
+          <a href="/tags/magit/">magit</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/chrome_plug_recommend/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">pumpkin必备的chrome扩展插件</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/org_set_fonts/">
+            <span class="next-text nav-default">给org-mode分别设置中英文字体</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="toure00/toure00.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://pumpkinblog.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">pumpkin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

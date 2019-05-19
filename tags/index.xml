@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Pumpkin Blog</title>
+    <link>https://pumpkinblog.top/tags/</link>
+    <description>Recent content in Tags on Pumpkin Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pumpkinblog.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>chrome</title>
+      <link>https://pumpkinblog.top/tags/chrome/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://pumpkinblog.top/tags/emacs/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://pumpkinblog.top/tags/git/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>magit</title>
+      <link>https://pumpkinblog.top/tags/magit/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/magit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org</title>
+      <link>https://pumpkinblog.top/tags/org/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/org/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setfont</title>
+      <link>https://pumpkinblog.top/tags/setfont/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/setfont/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://pumpkinblog.top/tags/blog/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://pumpkinblog.top/tags/hugo/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

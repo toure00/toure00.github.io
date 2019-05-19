@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cmd on Pumpkin Blog</title>
+    <link>https://pumpkinblog.top/tags/cmd/</link>
+    <description>Recent content in cmd on Pumpkin Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 May 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pumpkinblog.top/tags/cmd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GIT笔记</title>
+      <link>https://pumpkinblog.top/post/gitcmd/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/gitcmd/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://picsum.photos/1920/1033&#34; alt=&#34;avatar&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux常用命令</title>
+      <link>https://pumpkinblog.top/post/bridcmd/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/bridcmd/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://picsum.photos/1920/1038&#34; alt=&#34;avatar&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

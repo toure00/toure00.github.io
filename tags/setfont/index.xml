@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>setfont on Pumpkin Blog</title>
+    <link>https://pumpkinblog.top/tags/setfont/</link>
+    <description>Recent content in setfont on Pumpkin Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Jul 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pumpkinblog.top/tags/setfont/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>给org-mode分别设置中英文字体</title>
+      <link>https://pumpkinblog.top/post/org_set_fonts/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/org_set_fonts/</guid>
+      <description>&lt;p&gt;作为一个 emacs 和 org-mode 的重度使用者，我经常和字体作斗争，在 code 环境下，大家都喜欢用等宽字体，等宽字体在 org-mode 里的效果我就不是很喜欢了，在这里记录一下我折腾字体的成果。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

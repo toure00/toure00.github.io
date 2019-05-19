@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Pumpkin Blog</title>
+    <link>https://pumpkinblog.top/categories/</link>
+    <description>Recent content in Categories on Pumpkin Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pumpkinblog.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git</title>
+      <link>https://pumpkinblog.top/categories/git/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org-mode</title>
+      <link>https://pumpkinblog.top/categories/org-mode/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/categories/org-mode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://pumpkinblog.top/categories/blog/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

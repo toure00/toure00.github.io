@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>快速搭建Hugo博客 - Pumpkin Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="pumpkin" /><meta name="description" content="快速搭建一个属于自己的博客" /><meta name="keywords" content="blog, hugo, emacs, org-mode" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://pumpkinblog.top/post/build_hugo_note/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="快速搭建Hugo博客" />
+<meta property="og:description" content="快速搭建一个属于自己的博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pumpkinblog.top/post/build_hugo_note/" />
+<meta property="article:published_time" content="2019-05-21T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-11-06T19:07:29+08:00" />
+<meta itemprop="name" content="快速搭建Hugo博客">
+<meta itemprop="description" content="快速搭建一个属于自己的博客">
+
+
+<meta itemprop="datePublished" content="2019-05-21T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-06T19:07:29&#43;08:00" />
+<meta itemprop="wordCount" content="3287">
+
+
+
+<meta itemprop="keywords" content="blog,hugo," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="快速搭建Hugo博客"/>
+<meta name="twitter:description" content="快速搭建一个属于自己的博客"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pumpkin</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pumpkin</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">快速搭建Hugo博客</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-21 </span>
+        <div class="post-category">
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 约 3287 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#安装hugo">安装Hugo</a>
+<ul>
+<li><a href="#mac安装hugo">Mac安装Hugo</a></li>
+<li><a href="#linux安装hugo">Linux安装Hugo</a></li>
+<li><a href="#windows安装hugo">Windows安装Hugo</a></li>
+<li><a href="#直接下载">直接下载</a></li>
+</ul></li>
+<li><a href="#新建hugo项目">新建Hugo项目</a>
+<ul>
+<li><a href="#新建hugo项目命令">新建hugo项目命令</a></li>
+<li><a href="#选择主题">选择主题</a></li>
+<li><a href="#新建文章-生成静态网页">新建文章,生成静态网页</a></li>
+</ul></li>
+<li><a href="#如何将hugo部署上线">如何将Hugo部署上线 <del>到云服务器☁️(vps)</del></a>
+<ul>
+<li><a href="#1-dot-部署到云服务器">1. 部署到云服务器</a></li>
+<li><a href="#2-dot-部署到github-page">2. 部署到GitHub Page</a></li>
+<li><a href="#3-dot-本地需要执行的操作">3. 本地需要执行的操作</a></li>
+<li><a href="#4-dot-github-page与自己的域名关联">4. Github Page与自己的域名关联</a></li>
+</ul></li>
+<li><a href="#如何更新博客">如何更新博客</a>
+<ul>
+<li><a href="#在终端中更新--mac-linux">在终端中更新(Mac/Linux)</a></li>
+</ul></li>
+<li><a href="#emacs用户搭配org-mode-ox-hugo写hugo博客">emacs用户搭配org-mode、ox-hugo写hugo博客</a>
+<ul>
+<li><a href="#summary">summary</a></li>
+<li><a href="#配置使用ox-hugo">配置使用ox-hugo</a></li>
+<li><a href="#配置使用easy-hugo">配置使用easy-hugo</a></li>
+<li><a href="#添加更新博客方法">添加更新博客方法</a></li>
+</ul></li>
+<li><a href="#关于ssl证书">关于SSL证书</a>
+<ul>
+<li><a href="#github-dot-io的证书">github.io的证书</a></li>
+<li><a href="#为自己的域名创建证书">为自己的域名创建证书</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="https://picsum.photos/1920/1008" alt="avatar" /></p>
+
+<h2 id="安装hugo">安装Hugo</h2>
+
+<h3 id="mac安装hugo">Mac安装Hugo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">brew install hugo</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="linux安装hugo">Linux安装Hugo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">apt-get install hugo</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="windows安装hugo">Windows安装Hugo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 使用chocolatey包管理</span>
+choco install hugo -confirm
+
+<span class="c1"># 使用scoop包管理</span>
+scoop install hugo</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="直接下载">直接下载</h3>
+
+<p>可以在<a href="https://github.com/gohugoio/hugo/releases">这里</a>下载 <code>Hugo</code></p>
+
+<h2 id="新建hugo项目">新建Hugo项目</h2>
+
+<h3 id="新建hugo项目命令">新建hugo项目命令</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~
+hugo new site myblog</code></pre></td></tr></table>
+</div>
+</div>
+<figure>
+    <img src="/ox-hugo/2019-05-20-23-34-33.png"/> 
+</figure>
+
+
+<h3 id="选择主题">选择主题</h3>
+
+<p>我使用的主题是jane，地址在<a href="https://github.com/xianmin/hugo-theme-jane">这里</a>，主题就是我博客的主题，config.yaml各个参数的作用可以参考项目文档。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/xianmin/hugo-theme-jane ~/myblog/themes/jane</code></pre></td></tr></table>
+</div>
+</div>
+<p>主题下载好了，下面将主题的的配置和示例复制到hugo项目根目录，然后测试运行这个blog。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">cp -r ./themes/jane/exampleSite/* ./
+hugo server</code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/ox-hugo/2019-05-20-20-53-23.png" alt="" />
+访问 <a href="http://localhost:1313/">http://localhost:1313/</a> 浏览blog
+<img src="/ox-hugo/2019-05-20-20-58-04.png" alt="" />
+关于如何定制配置blog，不同的主题，方法会有差异，具体配置请参考你要使用的主题的文档。</p>
+
+<h3 id="新建文章-生成静态网页">新建文章,生成静态网页</h3>
+
+<p>你可以使用 <code>hugo new new_article.md</code> 新建文章，文章会直接创建到 <strong>content</strong> 目录下，也可以直接把md文件复制到项目 <strong>content</strong> 目录，<br />
+文章使用需要在 <code>md</code> 文件内容开头提供文章信息，如下所示。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">---
+title: 构建Hugo博客
+slug: &#34;build_hugo_blog&#34;
+date: &#34;2019-05-20&#34;
+tags: [&#34;hugo&#34;,&#34;blog&#34;]
+categories: [&#34;web&#34;]
+draft: true
+---</code></pre></td></tr></table>
+</div>
+</div>
+<p>这些就是这篇文章的基本信息：标题、url、日期、标签、分类、是否为草稿。<br />
+准备就绪后，在blog项目目录下运行 <code>hugo</code> 就可以生成静态网页了， <code>hugo</code> 命令会将项目 <strong>content</strong> 目录内的 <code>*.md</code> 文件全部渲染成静态网页，并输出到 <strong>public</strong> 目录中
+<img src="/ox-hugo/2019-05-20-21-21-54.png" alt="" /></p>
+
+<h2 id="如何将hugo部署上线">如何将Hugo部署上线 <del>到云服务器☁️(vps)</del></h2>
+
+<p><del>由于我个人是将blog部署到vps上的, 所以这里讲的是如何部署到远程主机, 如果是想部署到 <code>github page</code> , 可以参考<a href="https://jimmysong.io/posts/building-github-pages-with-hugo/">这篇文章</a></del></p>
+
+<h3 id="1-dot-部署到云服务器">1. 部署到云服务器</h3>
+
+<p>部署到云服务器需要你去购买一个域名，不然就只能以ip的形式来访问到你的网站。<br />
+配置Nginx，配置文件路径 <code>/usr/local/nginx/conf/nginx.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-conf" data-lang="conf"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-conf" data-lang="conf">server {
+    listen       80;
+    server_name  localhost; # 你的域名,如果没有，就不要修改这一行
+    index index.html;       # 首页
+    root /opt/blogweb;      # webserver根目录
+    error_page 404 /404.html;
+    }</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>新建webserver根目录 <code>mkdir /opt/blogweb</code> ，运行 <code>service nginx start</code> 启动nginx服务。</li>
+<li>新建一个远程仓库，并且为这个仓库建一个hook，使每次从本地push时，博客能同步更新。</li>
+</ul>
+
+<p>具体操作如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~
+git init --bare blog.git
+<span class="nb">cd</span> blog/hooks
+vim post-receive
+
+<span class="c1"># 写入以下内容,作用为,每次push时,更新nginx目录中的内容</span>
+<span class="c1">#!/bin/sh</span>
+<span class="nv">GIT_REPO</span><span class="o">=</span> ~/blog
+<span class="c1"># 需要自己创建这个目录</span>
+<span class="nv">TMP_GIT_CLONE</span><span class="o">=</span>/tmp/blog
+<span class="nv">NGINX_HTML</span><span class="o">=</span>/opt/blogweb
+rm -rf <span class="si">${</span><span class="nv">TMP_GIT_CLONE</span><span class="si">}</span>
+git clone <span class="nv">$GIT_REPO</span> <span class="nv">$TMP_GIT_CLONE</span>
+rm -rf <span class="si">${</span><span class="nv">NGINX_HTML</span><span class="si">}</span>/*
+cp -rf <span class="si">${</span><span class="nv">TMP_GIT_CLONE</span><span class="si">}</span>/* <span class="si">${</span><span class="nv">NGINX_HTML</span><span class="si">}</span>
+
+chmod <span class="m">755</span> post-receive</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-dot-部署到github-page">2. 部署到GitHub Page</h3>
+
+<p>今天（2019-06-01）决定将博客迁移到 <code>Github Page</code> 上，于是便有了这部分内容。<br />
+blog部署到 <code>GitHub Page</code> 也很简单，只需要创建一个 <code>github</code> 仓库，仓库 <strong>必须</strong> 以 <code>username.github.io.git</code> 来命名，比如：</p>
+
+<figure>
+    <img src="/ox-hugo/2019-06-01-23-34-59.png"/> 
+</figure>
+
+
+<blockquote>
+<p>⚠️ 注意新建的这个仓库必须是 <strong>public</strong> 的仓库，因为微软收购 github 以后，普通用户也可以创建私有仓库了，所以在这补充一下，你的blog仓库必须是公开的，否则 github page 没有办法读取到你仓库中的静态html文件资源。</p>
+</blockquote>
+
+<h3 id="3-dot-本地需要执行的操作">3. 本地需要执行的操作</h3>
+
+<p>首先需要将项目中的 <strong>public</strong> 目录初始化为 <code>git</code> 仓库，并且提交一次，然后将本地仓库与远程仓库进行关联，最后推送到远程仓库。</p>
+
+<p>需要执行以下命令:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git init
+git add .
+git commit -m <span class="s2">&#34;blog update&#34;</span>
+
+<span class="c1"># 部署到云服务器的远程仓库执行此条命令</span>
+git remote add origin ssh://user@ip:~/blog
+
+<span class="c1"># 部署到Github Page的远程仓库执行此条命令</span>
+git remote add origin https://github.com/username/username.github.io.git
+
+git push origin master</code></pre></td></tr></table>
+</div>
+</div>
+<p>至此，hugo已经部署到了好了，部署到云服务器的用户，输入你的域名（如果没有，也可以用ip代替）将可以打开博客了。如果是部署到Github Page的用户，可以使用 usrename.github.io 来访问博客。</p>
+
+<h3 id="4-dot-github-page与自己的域名关联">4. Github Page与自己的域名关联</h3>
+
+<p>如果你不想使用 <code>github page</code> 提供的域名，也可以使用自己购买的域名来访问你部署在github上的博客，需要你在你购买域名的域名商那里进行设置，在域名管理的面板添加 <code>DNS</code> 解析的相关信息。
+<img src="/ox-hugo/2019-06-01-23-58-51.png" alt="" />
+我填写的是记录类型是CNAME，也可以填写A，不过那样就比较麻烦，需要你添加好几个Github Page的常用ip，因为和我们的 username.github.io 域名对应的 ip 是会变化的，域名这里配置好以后还需要在github仓库里添加一些配置，那部分可以在更新博客的时候一起做，所以，关于github这边的配置我就写在更新博客中了。</p>
+
+<h2 id="如何更新博客">如何更新博客</h2>
+
+<h3 id="在终端中更新--mac-linux">在终端中更新(Mac/Linux)</h3>
+
+<p>在你的shell配置文件(.bashrc/.zhsrc)中加入下面的内容，然后保存并且 <code>source</code> 配置文件 ，以后你就可以使用 <code>blogupdate</code> 命令来更新博客了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">funciton blogupdate<span class="o">(){</span>
+    <span class="nb">cd</span> ~/myblog
+    hugo
+    <span class="nb">cd</span> public
+    <span class="c1"># 如果部署在github，想使用自己的域名，就取消下面那行的注释，并且把我的域名改成你自己的域名</span>
+    <span class="c1"># echo pumpkinblog.top &gt; CNAME</span>
+    git add .
+    git commit --amend --no-edit
+    git push --force origin master
+    <span class="nb">cd</span> ~
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>⚠️ 注意上面这组命令，不管提交、push多少次，都只存在一个commit记录，因为我的需求就是这样的，如果你想保留 <code>git commit</code> 记录，请自行调整。</p>
+</blockquote>
+
+<h2 id="emacs用户搭配org-mode-ox-hugo写hugo博客">emacs用户搭配org-mode、ox-hugo写hugo博客</h2>
+
+<h3 id="summary">summary</h3>
+
+<p>这一部分的内容是关于 hugo 与 emacs 结合使用，emacs 用户或者对 emacs 感兴趣的读者，可以继续阅读这部分内容。
+<img src="/ox-hugo/1.gif" alt="" />
+如上图所示， emacs 可以很方便的创作和更新博客，我使用的是 <code>org-mode</code> 来写作，emacs 也可以使用 <code>markdown-mode</code> 来编写md文件。</p>
+
+<p>上面演示的步骤为:</p>
+
+<ol>
+<li>编写 <code>org</code> 文件。</li>
+<li>使用 <code>ox-hugo</code> 将org文档转为md格式的文档，并将md文档导入到 <code>hugo</code> 项目的 <strong>content</strong> 目录，(如果是直接编写md文档，可以忽略这两步，直接在 <strong>content</strong> 目录中进行创作)。</li>
+<li>使用 <code>easy-hugo-previewer</code> 在本地预览文章。</li>
+<li>完成文章，使用我写的 <a href="#添加更新博客方法">blog-update</a>方法来更新博客，这个方法会build hugo项目的 <strong>public</strong> 目录，并且 <code>git push</code> 到远程仓库，此时你的最新文章就更新好了。</li>
+</ol>
+
+<h3 id="配置使用ox-hugo">配置使用ox-hugo</h3>
+
+<p>安装和配置使用参照<a href="https://ox-hugo.scripter.co/">官方文档</a>，这里主要讲一下 <code>org to md</code> 需要在org文件中写明的参数:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-org" data-lang="org"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-org" data-lang="org">hugo项目的根目录
+<span class="cs">#+HUGO_BASE_DIR</span><span class="c">: ~/myblog</span>
+
+org to md文件导出到这个目录,不写默认导入到content目录,
+<span class="cs">#+HUGO_SECTION</span><span class="c">: ./post</span>
+
+<span class="cs">#+HUGO_AUTO_SET_LASTMOD</span><span class="c">: t</span>
+
+文章的标签
+<span class="cs">#+HUGO_TAGS</span><span class="c">:</span>
+
+文章的分类
+<span class="cs">#+HUGO_CATEGORIES</span><span class="c">:</span>
+
+文章是否为草稿
+<span class="cs">#+HUGO_DRAFT</span><span class="c">: false</span>
+
+禁用作者属性 (如果导出失败可以加上这个选项)
+<span class="cs">#+options</span><span class="c">: author:nil</span>
+
+文章的标题
+<span class="cs">#+TITLE</span><span class="c">:</span>
+
+创建文章的日期
+<span class="cs">#+DATE</span><span class="c">: 2019-05-21</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>在 <code>org-mode</code> 下使用快捷键 <kbd>C-c C-e H h</kbd> 或者 <kbd>M-x</kbd> 输入 org-hugo-export-wim-to-md，<kbd>Enter</kbd> ，就可以将 org 导出为 md 了。也可以使用我写在文章最后的 <code>blog-export</code> 来导出org，(这个方法是依赖 ox-hugo的)。</p>
+
+<h3 id="配置使用easy-hugo">配置使用easy-hugo</h3>
+
+<p>配置easy-hugo请参考<a href="https://github.com/masasam/emacs-easy-hugo">官方文档</a> <br />
+配置示例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">easy-hugo</span>
+<span class="nb">:init</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">easy-hugo-basedir</span> <span class="s">&#34;~/bookshelf/&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">easy-hugo-url</span> <span class="s">&#34;https://yourblogdomain&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">easy-hugo-sshdomain</span> <span class="s">&#34;blogdomain&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">easy-hugo-root</span> <span class="s">&#34;/home/blog/&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">easy-hugo-previewtime</span> <span class="s">&#34;300&#34;</span><span class="p">)</span>
+<span class="nb">:bind</span> <span class="p">(</span><span class="s">&#34;C-c C-e&#34;</span> <span class="o">.</span> <span class="nv">easy-hugo</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>easy-hugo-basedir</td>
+<td>Directory where hugo html source code is placed on your laptop or desktop</td>
+</tr>
+
+<tr>
+<td>easy-hugo-url</td>
+<td>Url of the blog</td>
+</tr>
+
+<tr>
+<td>easy-hugo-sshdomain</td>
+<td>Domain written in ~/.ssh/config</td>
+</tr>
+
+<tr>
+<td>easy-hugo-root</td>
+<td>Root directory of hugo at your server</td>
+</tr>
+
+<tr>
+<td>easy-hugo-previewtime</td>
+<td>Preview display time</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>easy-hugo</code> 用于管理预览本地的文章，它有很多的功能，搭配 <code>md</code> 写作会很好用，由于我是用 <code>org-mode</code> 来写作的，easy-hugo我最常用的功能就两个:</p>
+
+<ol>
+<li><kbd>M-x</kbd> easy-hugo，进入easy-hugo-mode，这里会列出 <strong>content</strong> 下的所有文章按 d 删除。</li>
+<li><kbd>M-x</kbd> easy-hugo-previewer，在本地预览博客。</li>
+</ol>
+
+<h3 id="添加更新博客方法">添加更新博客方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">blog-export</span> <span class="p">()</span>
+  <span class="s">&#34;导出org到md&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">org-hugo-export-wim-to-md</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;导出完成&#34;</span><span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">blog-export-preview</span> <span class="p">()</span>
+  <span class="s">&#34;导出org到md,并打开浏览器预览&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">org-hugo-export-wim-to-md</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">easy-hugo-preview</span><span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">blog-update</span><span class="p">()</span>
+  <span class="s">&#34;更新博客&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">call-process-shell-command</span> <span class="s">&#34;cd ~/myblog &amp;&amp; hugo &amp;&amp; cd public &amp;&amp; git add . &amp;&amp; git commit --amend --no-edit &amp;&amp; git push --force origin master&#34;</span><span class="p">)</span>
+  <span class="c1">;; 如果部署在github，想使用自己的域名，就删除上面那行，取消下面这行的注释，并且把我的域名改成你自己的域名</span>
+  <span class="c1">;; (call-process-shell-command &#34;cd ~/myblog &amp;&amp; hugo &amp;&amp; cd public &amp;&amp; echo pumpkinblog.top &gt; CNAME &amp;&amp; git add . &amp;&amp; git commit --amend --no-edit &amp;&amp; git push --force origin master&#34;)</span>
+  <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;更新成功&#34;</span><span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">blog-export-update</span> <span class="p">()</span>
+  <span class="s">&#34;导出org to md 并更新博客&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">blog-export</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">blog-update</span><span class="p">)</span>
+  <span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="关于ssl证书">关于SSL证书</h2>
+
+<p>ssl证书这个东西一些人认为可有可无，我觉得还是有必要的，现在大部分浏览器都会把http的网站标记为不安全，实际上也确实是不安全（相对来说），而且现在也有很多免费的证书。</p>
+
+<h3 id="github-dot-io的证书">github.io的证书</h3>
+
+<p>先从简单的开始讲，github.io的证书可以去github的blog仓库中设置（settings）,勾选 <code>Enforce Https</code> ，就能使用Github提供的ssl证书了
+<img src="/ox-hugo/2019-06-02-00-30-12.png" alt="" /></p>
+
+<blockquote>
+<p>⚠️ 注意如果使用自己的域名，一定不要勾选此项，如果勾选了，访问你的域名，浏览器会发出警告，因为证书不匹配，github的证书是颁发给github.io的这个域名的。</p>
+</blockquote>
+
+<h3 id="为自己的域名创建证书">为自己的域名创建证书</h3>
+
+<p>制作证书可以用 <a href="https://github.com/Neilpang/acme.sh/wiki/说明">acme.sh</a> ， 如何制作这里面写的很详细，我补充一些需要注意的事项，</p>
+
+<ul>
+<li>如果你使用的是云服务器或者本地服务器，那么两种生成证书的方式你都可以使用。</li>
+<li>如果你使用的是Github仓库，自己的域名，那么你只能使用 <strong>dns方式</strong> 生成证书，因为你没有自己的公网ip。</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">pumpkin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-06
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/blog/">blog</a>
+          <a href="/tags/hugo/">hugo</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/org_set_fonts/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">给org-mode分别设置中英文字体</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/org/">
+            <span class="next-text nav-default">org-mode教程</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="toure00/toure00.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://pumpkinblog.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">pumpkin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Pumpkin Blog</title>
+    <link>https://pumpkinblog.top/post/</link>
+    <description>Recent content in Posts on Pumpkin Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pumpkinblog.top/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pumpkin必备的chrome扩展插件</title>
+      <link>https://pumpkinblog.top/post/chrome_plug_recommend/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/chrome_plug_recommend/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://picsum.photos/1920/1021&#34; alt=&#34;avatar&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Magit常用命令总结</title>
+      <link>https://pumpkinblog.top/post/magit_note/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/magit_note/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://picsum.photos/1920/1017&#34; alt=&#34;avatar&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>给org-mode分别设置中英文字体</title>
+      <link>https://pumpkinblog.top/post/org_set_fonts/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/org_set_fonts/</guid>
+      <description>&lt;p&gt;作为一个 emacs 和 org-mode 的重度使用者，我经常和字体作斗争，在 code 环境下，大家都喜欢用等宽字体，等宽字体在 org-mode 里的效果我就不是很喜欢了，在这里记录一下我折腾字体的成果。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>快速搭建Hugo博客</title>
+      <link>https://pumpkinblog.top/post/build_hugo_note/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/build_hugo_note/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://picsum.photos/1920/1008&#34; alt=&#34;avatar&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>org-mode教程</title>
+      <link>https://pumpkinblog.top/post/org/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://pumpkinblog.top/post/org/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://picsum.photos/1920/1039&#34; alt=&#34;avatar&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

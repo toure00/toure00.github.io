@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>给org-mode分别设置中英文字体 - Pumpkin Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="pumpkin" /><meta name="description" content="给emacs org-mode设置中英文字体" /><meta name="keywords" content="org, orgmode, setfont, 设置字体, emacs, chinese" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://pumpkinblog.top/post/org_set_fonts/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="给org-mode分别设置中英文字体" />
+<meta property="og:description" content="给emacs org-mode设置中英文字体" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pumpkinblog.top/post/org_set_fonts/" />
+<meta property="article:published_time" content="2019-07-04T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-07-04T15:37:47+08:00" />
+<meta itemprop="name" content="给org-mode分别设置中英文字体">
+<meta itemprop="description" content="给emacs org-mode设置中英文字体">
+
+
+<meta itemprop="datePublished" content="2019-07-04T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-07-04T15:37:47&#43;08:00" />
+<meta itemprop="wordCount" content="1022">
+
+
+
+<meta itemprop="keywords" content="org,setfont," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="给org-mode分别设置中英文字体"/>
+<meta name="twitter:description" content="给emacs org-mode设置中英文字体"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Pumpkin</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Pumpkin</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">给org-mode分别设置中英文字体</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-07-04 </span>
+        <div class="post-category">
+            <a href="/categories/org-mode/"> org-mode </a>
+            </div>
+          <span class="more-meta"> 约 1022 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#previe-screenshots">Previe screenshots</a></li>
+<li><a href="#设置emacs全局中文字体">设置emacs全局中文字体</a></li>
+<li><a href="#设置-org-mode-中的字体">设置 org-mode 中的字体</a>
+<ul>
+<li><a href="#配置-org-mode-全局字体">配置 org-mode 全局字体</a></li>
+<li><a href="#定制-org-mode-face">定制 org-mode face</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>作为一个 emacs 和 org-mode 的重度使用者，我经常和字体作斗争，在 code 环境下，大家都喜欢用等宽字体，等宽字体在 org-mode 里的效果我就不是很喜欢了，在这里记录一下我折腾字体的成果。</p>
+
+<h2 id="previe-screenshots">Previe screenshots</h2>
+
+<p>默认配置(我这里默认的字体，中文为苹方体，英文为 Source Code)
+<img src="/ox-hugo/默认字体.png" alt="" />
+配置后(中文：翩翩体-简 英文：Segoe Print)
+<img src="/ox-hugo/配置后.png" alt="" /></p>
+
+<p>中文写作，可能我的默认配置比起配置后的看起来也不差，因为我这里也是随便配的，可能也不是多好看的配置，主要是讲如何配置。</p>
+
+<hr />
+
+<p>现在看下英文的文章</p>
+
+<p>等宽字体(source code)
+<img src="/ox-hugo/等宽字体.png" alt="" />
+衬线字体(Source Serif Pro)
+<img src="/ox-hugo/衬线字体.png" alt="" />
+手写体(Segoe Print)
+<img src="/ox-hugo/手写体.png" alt="" /></p>
+
+<p>这里应该就可以看出在英文写作中，使用等宽字体可能不是太好的选择</p>
+
+<h2 id="设置emacs全局中文字体">设置emacs全局中文字体</h2>
+
+<p>首先说一下如何设置 emacs 全局的中文字体，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nf">set-fontset-font</span> <span class="no">t</span> <span class="ss">&#39;han</span> <span class="p">(</span><span class="nf">font-spec</span> <span class="nb">:family</span> <span class="s">&#34;楷体-简&#34;</span> <span class="nb">:size</span> <span class="mi">15</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>当然，这个也可以不设置，使用系统默认的中文字体。</p>
+
+<h2 id="设置-org-mode-中的字体">设置 org-mode 中的字体</h2>
+
+<p>这里详细说一下如何设置 org-mode 中的字体，包括如何给 org-table 设置中英文等宽字体。</p>
+
+<h3 id="配置-org-mode-全局字体">配置 org-mode 全局字体</h3>
+
+<p>使用 <code>buffer-face-mode-face</code> 可以单独配置某一个 buffer 的 face ，包括 font face，所以可以利用这个 funciton 让 org-mode 使用我们自己配置的字体，具体实现如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">with-eval-after-load</span> <span class="ss">&#39;org</span>
+  <span class="p">(</span><span class="nb">defun</span> <span class="nv">org-buffer-face-mode-variable</span> <span class="p">()</span>
+    <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+    <span class="c1">;; 创建一个自己的face</span>
+    <span class="p">(</span><span class="nv">make-face</span> <span class="ss">&#39;my-org-face</span><span class="p">)</span>
+    <span class="c1">;; 配置这个face</span>
+    <span class="p">(</span><span class="nv">set-face-attribute</span> <span class="ss">&#39;my-org-face</span> <span class="no">nil</span>
+                        <span class="c1">;; 设置英文字体</span>
+                        <span class="nb">:font</span> <span class="s">&#34;Segoe Print&#34;</span>
+                        <span class="c1">;; 设置中文字体，如果不需设置中文字体可以去掉这一行</span>
+                        <span class="nb">:fontset</span> <span class="p">(</span><span class="nv">create-fontset-from-fontset-spec</span> <span class="p">(</span><span class="nf">concat</span> <span class="s">&#34;-*-*-*-*-*--*-*-*-*-*-*-fontset-org&#34;</span> <span class="s">&#34;,han:翩翩体-简&#34;</span><span class="p">))</span>
+                        <span class="p">)</span>
+    <span class="c1">;; 指定buffer-face的face为自己定义的那个face</span>
+    <span class="p">(</span><span class="nb">setq</span> <span class="nv">buffer-face-mode-face</span> <span class="ss">&#39;my-org-face</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">buffer-face-mode</span><span class="p">))</span>
+
+  <span class="c1">;; org-mode-hook 这个 function</span>
+  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;org-mode-hook</span> <span class="ss">&#39;org-buffer-face-mode-variable</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>到这里，我们的 org-mode 就可以使用我们自己定义的中英文字体了，org-mode 里所有的内容都使用我们定义好的字体，这显然不是我想要的，且不说 org-table 的对齐问题，如果你使用了衬线字体，那么你的 code block 里也会使用衬线字体，衬线字体用在 coed block 里我肯定是不能接受这样的设定。</p>
+
+<h3 id="定制-org-mode-face">定制 org-mode face</h3>
+
+<p>在这里，我定制了几个org-face，</p>
+
+<table>
+<thead>
+<tr>
+<th>face</th>
+<th>describe</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>org-meta-line</td>
+<td>定义 #+ 这种自定义属性的 face</td>
+</tr>
+
+<tr>
+<td>org-block</td>
+<td>定义 code block 的 face</td>
+</tr>
+
+<tr>
+<td>org-link</td>
+<td>定义 link 的 face (如果要在 table 中输入 link ， 这样要和 org-table使用一样的字体)</td>
+</tr>
+
+<tr>
+<td>org-table</td>
+<td>定义 tabel 的 face，在这样要使用一个中英文等宽的字体，table才能对齐。</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">with-eval-after-load</span> <span class="ss">&#39;org</span>
+  <span class="p">(</span><span class="nv">set-face-attribute</span> <span class="ss">&#39;org-meta-line</span>         <span class="no">nil</span>  <span class="nb">:inherit</span> <span class="ss">&#39;fixed-pitch</span> <span class="nb">:font</span> <span class="s">&#34;Source Code Pro&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">set-face-attribute</span> <span class="ss">&#39;org-block</span>             <span class="no">nil</span>  <span class="nb">:inherit</span> <span class="ss">&#39;fixed-pitch</span> <span class="nb">:font</span> <span class="s">&#34;Source Code Pro&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">set-face-attribute</span> <span class="ss">&#39;org-link</span>              <span class="no">nil</span>  <span class="nb">:font</span> <span class="s">&#34;等距更纱黑体 SC 13&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">set-face-attribute</span> <span class="ss">&#39;org-table</span>             <span class="no">nil</span>  <span class="nb">:font</span> <span class="s">&#34;等距更纱黑体 SC 13&#34;</span> <span class="nb">:fontset</span> <span class="p">(</span><span class="nv">create-fontset-from-fontset-spec</span> <span class="p">(</span><span class="nf">concat</span> <span class="s">&#34;-*-*-*-*-*--*-*-*-*-*-*-fontset-orgtable&#34;</span> <span class="s">&#34;,han:等距更纱黑体 SC:size=13&#34;</span><span class="p">))))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这些就是我定制的 org face，如果你还想定制别的 org face，可以去 org-faces.el 中查看,
+关于 org-table 中英文对齐，这里使用的字体是 <a href="https://github.com/be5invis/Sarasa-Gothic/releases">更莎黑体</a>，目前我只知道这一种字体可以在 org-tabel 里中英文对齐,
+如果你还知道别的能对齐的字体，可以在下面留言告诉我。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">pumpkin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-07-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/org/">org</a>
+          <a href="/tags/setfont/">setfont</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/magit_note/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Magit常用命令总结</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/build_hugo_note/">
+            <span class="next-text nav-default">快速搭建Hugo博客</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="toure00/toure00.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://pumpkinblog.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">pumpkin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

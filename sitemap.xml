@@ -1,0 +1,144 @@
+<?xml-stylesheet type="text/xsl" href="https://pumpkinblog.top/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/chrome/</loc>
+    <lastmod>2019-11-06T18:14:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/post/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/post/chrome_plug_recommend/</loc>
+    <lastmod>2019-11-06T18:14:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/categories/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/emacs/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/categories/git/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/git/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/magit/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/post/magit_note/</loc>
+    <lastmod>2019-11-29T13:56:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/org/</loc>
+    <lastmod>2019-07-04T15:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/categories/org-mode/</loc>
+    <lastmod>2019-07-04T15:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/setfont/</loc>
+    <lastmod>2019-07-04T15:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/post/org_set_fonts/</loc>
+    <lastmod>2019-07-04T15:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/categories/blog/</loc>
+    <lastmod>2019-11-06T19:07:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/blog/</loc>
+    <lastmod>2019-11-06T19:07:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/tags/hugo/</loc>
+    <lastmod>2019-11-06T19:07:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/post/build_hugo_note/</loc>
+    <lastmod>2019-11-06T19:07:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://pumpkinblog.top/post/org/</loc>
+    <lastmod>2019-06-27T16:28:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
